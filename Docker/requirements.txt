@@ -1,7 +1,7 @@
-ipython
+
 matplotlib
 numpy
 Pillow
 scikit-image
-
+tensorflow==2.16.1
 
