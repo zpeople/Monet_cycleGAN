@@ -8,7 +8,17 @@ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /nores
 bcdedit /set hypervisorlaunchtype Auto
 
 # 构建Docker镜像 dcoakerfile没有后缀
-docker build -t my_flask_app .
+docker build -t cgan .
 
-# 运行Docker容器
-docker run -d -p 5000:5000 my_flask_app
+# 运行Docker容器 flask
+docker run -d -p 5000:5000 cgan
+
+# 运行Docker容器 jupyter
+docker run -it --rm -p 8888:8888 cgan
+
+# 查看运行的docker
+docker ps
+
+# 停止docker
+docker stop xxxxxx
+
